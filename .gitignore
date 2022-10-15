@@ -35,12 +35,6 @@ out/
 
 ### VS Code ###
 .vscode/
-src/.DS_Store
-.DS_Store
-build.gradle
-*.properties
-src/main/resources/application.properties
-build.gradle
-src/main/resources/application.properties
-*.gradle
-*.properties
+
+
+
