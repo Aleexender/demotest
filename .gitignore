@@ -40,3 +40,5 @@ src/.DS_Store
 build.gradle
 *.properties
 src/main/resources/application.properties
+build.gradle
+src/main/resources/application.properties
