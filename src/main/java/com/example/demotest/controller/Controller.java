@@ -27,3 +27,10 @@ public class Controller {
         return "hello " + name;
     }
 
+    @GetMapping("hello-api") //데이터를 놓고 싶을때 API방식
+    @ResponseBody
+    public Hello helloApi(@RequestParam("name") String name){
+        Hello hello = new Hello();
+        hello.setName(name);
+        return hello;
+    }
