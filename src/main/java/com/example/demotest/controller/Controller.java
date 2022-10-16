@@ -14,3 +14,9 @@ public class Controller {
         model.addAttribute("data", "hello!!");
         return "Hello";
     }
+
+    @GetMapping("hello-mvc")
+    public String helloMVC(@RequestParam("name") String name, Model model){ // 웹 에서 파라메터를 받는법
+        model.addAttribute("name", name);
+        return "hello-template";
+    }
