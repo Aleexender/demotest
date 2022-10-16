@@ -34,3 +34,16 @@ public class Controller {
         hello.setName(name);
         return hello;
     }
+
+    static class Hello{
+        private String name;
+
+        public String getName() { // getter 자바 빈 표준 방식 = 게터 세터 or 프로포티 사용 방식
+            return name;
+        }
+
+        public void setName(String name) { // setter
+            this.name = name;
+        }
+    }
+}
