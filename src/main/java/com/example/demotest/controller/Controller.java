@@ -20,3 +20,10 @@ public class Controller {
         model.addAttribute("name", name);
         return "hello-template";
     }
+
+    @GetMapping("hello-string")
+    @ResponseBody // HTTP 바디부위에 이데이터를 직접 넣어준다
+    public String helloString(@RequestParam("name")String name){
+        return "hello " + name;
+    }
+
