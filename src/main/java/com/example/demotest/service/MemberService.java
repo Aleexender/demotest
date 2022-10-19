@@ -11,3 +11,10 @@ public class MemberService { // 비지니스에 갖고있는 용어를 써야함
 
     private final MemberRepository memberRepository = new MemoryMemberRepository();
 
+    // 회원 가입
+    public Long join(Member member){
+        //같은 이름이 있는 중복회원 X
+        validateDuplicateMember(member); //중복회원 검증
+        memberRepository.save(member);
+        return member.getId();
+    }
