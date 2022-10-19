@@ -8,3 +8,6 @@ import java.util.List;
 import java.util.Optional;
 
 public class MemberService { // 비지니스에 갖고있는 용어를 써야함
+
+    private final MemberRepository memberRepository = new MemoryMemberRepository();
+
