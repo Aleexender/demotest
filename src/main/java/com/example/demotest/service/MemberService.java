@@ -25,3 +25,7 @@ public class MemberService { // 비지니스에 갖고있는 용어를 써야함
             throw new IllegalStateException("이미 존재하는 회원입니다");
         });
     }
+    //전체 회원 조회
+    public List<Member> findMembers() {
+        return memberRepository.findAll();
+    }
