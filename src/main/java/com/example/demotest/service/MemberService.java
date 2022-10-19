@@ -29,3 +29,8 @@ public class MemberService { // 비지니스에 갖고있는 용어를 써야함
     public List<Member> findMembers() {
         return memberRepository.findAll();
     }
+
+    public Optional<Member> findOne(Long memberId){
+        return memberRepository.findById(memberId);
+    }
+}
