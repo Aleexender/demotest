@@ -18,3 +18,10 @@ public class MemberService { // 비지니스에 갖고있는 용어를 써야함
         memberRepository.save(member);
         return member.getId();
     }
+
+    private void validateDuplicateMember(Member member) {
+        Optional<Member>  result = memberRepository.finByName(member.getName());
+        result.ifPresent(m ->{
+            throw new IllegalStateException("이미 존재하는 회원입니다");
+        });
+    }
