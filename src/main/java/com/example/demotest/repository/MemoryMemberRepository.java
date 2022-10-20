@@ -20,3 +20,10 @@ public class MemoryMemberRepository implements MemberRepository{
     public Optional<Member> findById(Long id) {
         return Optional.ofNullable(store.get(id)); // null 이 반환될 가능성이 있을때 Optional.ofNullable
     }
+
+    @Override
+    public Optional<Member> finByName(String name) {
+        return store.values().stream()
+                .filter(member -> member.getName().equals(name))
+                .findAny();
+    }
