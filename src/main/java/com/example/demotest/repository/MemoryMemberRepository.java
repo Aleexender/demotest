@@ -27,3 +27,8 @@ public class MemoryMemberRepository implements MemberRepository{
                 .filter(member -> member.getName().equals(name))
                 .findAny();
     }
+
+    @Override
+    public List<Member> findAll() {
+        return new ArrayList<>(store.values()); // member 반환 value 이기 때문
+    }
