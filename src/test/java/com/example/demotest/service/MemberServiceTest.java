@@ -10,7 +10,7 @@ import org.junit.jupiter.api.Test;
 import static org.assertj.core.api.Assertions.*;
 import static org.junit.jupiter.api.Assertions.*;
 
-class MemberServiceTest { // 빌드될떄 실제 코드에 반영이 안된다 , 테스트는 독립적으로 실행
+class MemberServiceTest { // 빌드될떄 실제 코드에 반영이 안된다, 테스트는 독립적으로 실행
 
     MemberService memberService;
     MemoryMemberRepository memoryMemberRepository = new MemoryMemberRepository();
@@ -45,7 +45,6 @@ class MemberServiceTest { // 빌드될떄 실제 코드에 반영이 안된다 ,
         //given
         Member member1 = new Member();
         member1.setName("spring");
-
         Member member2 = new Member();
         member2.setName("spring");
 
