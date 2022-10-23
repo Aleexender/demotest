@@ -6,3 +6,11 @@ import org.springframework.stereotype.Controller;
 
 @Controller
 public class MemberContorller {
+
+    private final MemberService memberService;
+
+    @Autowired // 연결을 시켜주는것
+    public MemberContorller(MemberService memberService) {
+        this.memberService = memberService;
+    }
+}
