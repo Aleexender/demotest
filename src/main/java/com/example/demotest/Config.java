@@ -1,5 +1,8 @@
 package com.example.demotest;
 
+import com.example.demotest.repository.MemberRepository;
+import com.example.demotest.repository.MemoryMemberRepository;
+import com.example.demotest.service.MemberService;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
@@ -10,7 +13,12 @@ import java.util.Set;
 
 public class Config {
     @Bean
-    Set<String> ids(){
-        return new HashSet<>();
+    public MemberService memberService() {
+        return new MemberService(memberRepository());
+    }
+
+    @Bean
+    public MemberRepository memberRepository() {
+        return new MemoryMemberRepository();
     }
 }
