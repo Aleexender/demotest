@@ -9,14 +9,14 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 import java.util.Optional;
 
-@Service // 스프링이 올라올떄, 스프링이 맴버서비스를 스프링 컨테이너에 넣어줌
+//@Service // 스프링이 올라올떄, 스프링이 맴버서비스를 스프링 컨테이너에 넣어줌
 public class  MemberService { // 비지니스에 갖고있는 용어를 써야함
 
     private final MemberRepository memberRepository;
 
-    @Autowired
+//    @Autowired
     public MemberService(MemberRepository memberRepository) { // 멤버 서비스입장에서 보면 멤버리파지토리 외부에서 넣어준다 = DI
-        this.memberRepository = memberRepository;
+        this.memberRepository = memberRepository; // 생성자 주입
     }
 
     // 회원 가입
