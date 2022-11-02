@@ -7,11 +7,11 @@ public class Member {
 
     public Long getId() {
         return id;
-    }
+    } // 게터, 세터 접근방식
 
     public void setId(Long id) {
         this.id = id;
-    }
+    } // 게터, 세터 접근방식
 
     public String getName() {
         return name;
