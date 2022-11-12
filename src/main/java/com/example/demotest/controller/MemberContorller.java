@@ -23,7 +23,7 @@ public class MemberContorller {
     }
 
 
-    @GetMapping("/members/new") //get 방식 , get은 조회할때 씀
+    @GetMapping("/members/new") //get 방식 , get은 조회할때 씀 22
     public String createForm() {
         return "members/createMemberForm";
     }
